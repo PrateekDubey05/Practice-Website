@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Practice</title>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+    }
+    h2{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+    h3{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+    }
+
+    .content{
+        margin-left: 160px;
+        padding: 10px;
+    }
+    .nav{
+        display: inline-block;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.101);
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        
+    }
+    .navList{
+        display: block;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 400;
+        padding: 8px;
+    }
+
+    .navList:hover{
+        background-color: rgb(207, 207, 207);
+        border-radius: 5px;
+    }
+
+    .dv{
+        background-color: lightblue;
+        border: 10px solid blue;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv1{
+        background-color: lightgreen;
+        border: 10px dotted green;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+        
+    }
+    .dv2{
+        background-color: lightcoral;
+        border: 10px dashed red;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv3{
+        background-color: lightpink;
+        border: 10px double rgb(255, 77, 136);
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv4{
+        background-color: lightyellow;
+        border: 10px inset yellow;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv5{
+        background-color: lightgrey;
+        border: 10px outset grey;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv6{
+        background-color: lightcyan;
+        border-width: 10px;
+        border-style: solid;
+        border-image: url(Nissan\ R34\ Cyberpunk\ Style.png) 30 stretch;
+        padding: 15px;
+        margin: 10px;
+    }
+    .dv7{
+        background-color: lightseagreen;
+        border: 10px groove teal;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 10px;
+    }
+    #italic{
+        color: red;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #div1{
+        height: auto;
+        width: 500px;
+        margin-left: 8;
+        margin-right: 8;
+        padding: 10px;
+        border: 5px inset red;
+        background-color: lightgrey;
+        color: black;
+    }
+    #div2{
+        height: auto;
+        width: 500px;
+        margin-left: 12;
+        margin-right: 10;
+        padding: 12px;
+        border: 4px double rgb(0, 255, 0);
+        background-color: rgb(255, 19, 141);
+        color: rgb(251, 255, 21);
+        font-weight: 700;
+        font-size: large;
+    }
+    strong,em,tt{
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+        padding: 1px;
+        line-height: 1.5;
+        background-color:coral;
+    }
+    .bgprop{
+        color: white;
+        text-decoration: underline rgb(255, 213, 0);
+        background-image: url(/Omen\ Wallpaper.jpg);
+        background-size: fill;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+
+    }
+    .bgtext{
+        color: hsla(0, 0%, 100%, 0.2);
+        font-size: 20px;
+        font-weight: 100;
+        padding: 10px;
+    }
+    input[type="name"],[type="text"], input[type="number"], input[type="email"], input[type="password"]{
+        background-color: rgb(63, 205, 172);
+        padding: 8px;
+        margin: 5px;
+        border: 2px solid rgb(11, 11, 11);
+        border-radius: 5px;
+    }
+    div+h4{
+        color: darkblue;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+    div>i{
+        color: darkgreen;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+    }
+    /* div~p{
+        color: darkred;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    } */
+    div small{
+        color: darkorange;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .main{
+        display: grid;
+        justify-items: center;
+        background-color: lightgrey;
+        border: 5px solid black;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .picture{
+        width: 300px;
+        height: 400px;
+        border: 5px solid black;
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    .text{
+        background-color: rgb(239, 239, 239);
+        overflow-y: scroll;
+        width: 265px;
+        height: 300px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 20px;
+        margin: 10px;
+        border: 5px dashed rgb(0, 0, 0);
+        border-radius: 10px;
+        
+    }
+
+    .img1{
+        border: 5px solid black;
+        border-radius: 15px;
+        margin: 10px;
+        filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.386));
+    }
+
+    h3::before{
+        content: "🔥 ";
+    }
+    b::after{
+        content: " - Remember This!";
+    }
+
+    tt::first-line{
+        color: blue;
+        font-weight: bold;
+        font-size: 19px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    article::first-letter{
+        color: #ff0000;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    i::selection{
+        background-color: orange;
+    }
+
+    li::marker{
+        color: green;
+        font-size: 30px;
+    }
+
+    input::placeholder{
+        color: brown;
+    }
+
+    .spanA{
+        background-color: lightcoral;
+        border: 5px solid red;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .spanB{
+        background-color: lightblue;
+        border: 5px solid blue;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .spanC{
+        display: block;
+        background-color: lightgreen;
+        border: 5px solid green;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanD{
+        display: block;
+        background-color: rgb(224, 255, 253);
+        border: 5px solid orange;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanE{
+        display: none;
+        background-color: rgb(255, 224, 235);
+        border: 5px solid yellow;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanF{
+        display: none;
+        background-color: lightgrey;
+        border: 5px solid grey;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanG{
+        display: inline-block;
+        background-color: lightyellow;
+        border: 5px solid brown;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanH{
+        display: inline-block;
+        background-color: lightcyan;
+        border: 5px solid purple;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanI{
+        display: flex;
+        background-color: lightpink;
+        border: 5px solid magenta;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanJ{
+        display: flex;
+        background-color: lightgrey;
+        border: 5px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanK{
+        display: grid;
+        background-color: lightgreen;
+        border: 5px solid darkgreen;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanL{
+        display: grid;
+        background-color: lightblue;
+        border: 5px solid navy;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanM{
+        display: contents;
+        background-color: lightcoral;
+        border: 5px solid red;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .spanN{
+        display: contents;
+        background-color: lightseagreen;
+        border: 5px solid teal;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body bgcolor="beige">
+<div class="content">
+    <nav class="nav">
+        <a class="navList" href="#Home" >Home</a>
+        <a class="navList" href="#Form" >Form</a>
+        <a class="navList" href="#Formwithtable" >Form with Table</a>
+        <a class="navList" href="#Images" >Images</a>
+        <a class="navList" href="#Videos" >Videos</a>
+        <a class="navList" href="#Lists" >Lists</a>
+        <a class="navList" href="#ulList" >Unordered List</a>
+        <a class="navList" href="#ddList" >Discription List</a>
+        <a class="navList" href="#Table" >Table</a>
+        <a class="navList" href="#Colspan" >ColSpan</a>
+        <a class="navList" href="#Rowspan" >RowSpan</a>
+        <a class="navList" href="#Align" >Align</a>
+        <a class="navList" href="#BorderStyle" >Border Style</a>
+        <a class="navList" href="#HTML5" >HTML5</a>
+
+    </nav>
+    
+    <h1 id="Home">Home</h1>
+    <p>Welcome to the HTML Practice Page! This page is designed to help you learn and practice various HTML elements and attributes. Below, you'll find a variety of examples, including forms, tables, images, videos, lists, and more. Feel free to explore the code and see how different HTML tags work together to create a structured web page.</p>
+<h1 id="Form">Form</h1>
+    <h2>User Information</h2>
+    <form>
+        <fieldset>
+            <label style="font-size: 20px; font-weight: bold;">First Name:</label>
+            <input type="Name">
+            <br><br>
+            <label style="font-size: 20px; font-weight: bold;">Last Name:</label>
+            <input type="Name">
+            <br><br>
+            <label style="font-size: 20px; font-weight: bold;">
+                Enter Your Age:
+                <input type="number" name="Age" pattern="[0-9]{1,3}">
+            </label>
+            <br><br>
+            <label style="font-size: 20px; font-weight: bold;">
+                Contact Number:
+                <input type="text">
+            </label>
+            <br><br>
+            <label style="font-size: 20px; font-weight: bold;">
+                Enter Your Email:
+                <input type="text" name="Email">
+            </label>
+            <br><br>
+            <h2>Select Your Stream</h2>
+            <input type="radio" id="sc" name="strm">
+            <label style="font-size: 20px; font-weight: bold;">Science</label><br>
+            <input type="radio" id="art" name="strm">
+            <label style="font-size: 20px; font-weight: bold;">Arts</label><br>
+            <input type="radio" id="comm" name="strm">
+            <label style="font-size: 20px; font-weight: bold;"> Commerce</label><br>
+            <br>
+            <h2>Select Your Language</h2>
+            <input type="radio" id="html" name="lang">
+            <label style="font-size: 20px; font-weight: bold;">HTML</label>
+            <br>
+            <input type="radio" id="css" name="lang">
+            <label style="font-size: 20px; font-weight: bold;">CSS</label>
+            <br>
+            <input type="radio" id="java" name="lang">
+            <label style="font-size: 20px; font-weight: bold;">JavaScript</label>
+            <br>
+            <input type="radio" id="py" name="lang">
+            <label style="font-size: 20px; font-weight: bold;">Python</label>
+
+            <br><br>
+        
+            <input type="submit" id="submit" name="sbmt" value="submit">
+            <button>Reset</button>
+            <input type="button" value="Click Here">
+        </fieldset>
+     </form> 
+<br>
+<hr size="5px" color="black">
+<br>
+<h1 style="text-align: center;" id="Formwithtable">Forms With Table</h1>
+    <form>
+        <table border = 2px, cellpadding="10px", cellspacing="0px" style="margin: auto; border-collapse: collapse;">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <td>
+                    <input type="text" placeholder="Enter Your Name">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Email
+                </th>
+                <td>
+                    <input type="Email" placeholder="Enter Your Email">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Password
+                </th>
+                <td>
+                    <input type="password" placeholder="Enter your Password">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Date Of Birth
+                </th>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Select Your Gender
+                </th>
+                <td>
+                    <label><input type="radio" name="gender">Male</label>
+                    <label><input type="radio" name="gender">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Select Your Country</th>
+                <td>
+                    <select>
+                        <option>Choose</option>
+                        <option>India</option>
+                        <option>UK</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Choose Your Hobby</th>
+                <td>
+                    <label><input type="checkbox" name="m">Music</label>
+                    <label><input type="checkbox" name="v">Video</label>
+                    <label><input type="checkbox" name="d">Dance</label>
+                    <label><input type="checkbox" name="ve">Video Editing</label>
+                    <label><input type="checkbox" name="c">Coding</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; padding: 10px;">
+                    <button type="submit" style="padding: 12px; background: blue; color: white; font-weight: bold; border: none; border-radius: 20px;">Submit</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure odit voluptas reprehenderit modi labore iste eum doloremque, neque officia, nihil non natus molestiae delectus architecto, accusamus ad laudantium sapiente! Soluta.</p>
+    
+    <hr> <br>
+    <p><b>This text is BOLD</b></p>
+    <p><i>This text is Italic</i></p>
+    <p><u>This text is UNDERLINE</u></p>
+    <p><strong>This STRONG tag</strong></p>
+    <p><em>This is Emphasis Tag</em></p>
+    <Center><h2>This Text is in Center</h2></Center>
+    
+    <p>
+        HTML is <b>HYPER TEXT MARKUP LANGUAGE</b>. It simply means 'Text within text.' A text has a link within it which is called hyper text. Whenever you click on a link which bring you to a new webpage, you have clicked on a hyper text. Hyper text is a way to link two or more web pages (HTML DOC) with each other.
+    </p>
+   
+    <p>
+        Markup Language is a computer language that is used to apply layout and formatting conventions to a text document. Markup language makes text more interactive and dynamic. it can turn Text into images, tables, links, buttons, etc.
+    </p>
+
+    <h2>CO<sub>2</sub></h2>
+    <h2>X<sup>3</sup></h2>
+    <Mark>This text is marked</Mark><br>
+    <small>Thsi Text Is small</small><br>
+    <big>This text is big</big><br>
+    <s>This text is Striked</s><br>
+    <q>This is a quote</q><br>
+    <h2 id="Images">Images</h2>
+    <hr color="black" size="3">
+    <img src="Nissan R34 Cyberpunk Style.png" alt="Nissan R34 Poster" width=320 height=400 title="Nissan R34 Poster" border="5">
+    <img src="Rennala Poster final.png" alt="Renala Poster" width="320" height="400" title="Rennala Poster" border="5">
+    <img src="Coffee Ad Poster.png" alt="Coffee Ad Poster" width="320" height="400" title="Coffee Ad Poster" border="5">
+    <img src="Keep F_resh Poster Design.png" alt="Nike Poster" width="320" height="400" title="Nike Poster" border="5">
+    <hr color="black" size="3">
+
+    <h3>Exteranal Links</h3>
+    <a href="Keep F_resh Poster Design.png" target="_blank">Click Here</a>
+    
+    <br>
+    <hr size="5px" color="black">
+
+    <h3 id="Videos">Videos</h3>
+
+    <video src="/AURORA - Cure For Me.mp4" height="40%" width="50%" autoplay controls muted></video>
+    <br>
+    <hr size="5px" color="black">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0jIsK_HxhJ4?si=9IwaGGuGQLS1gawz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <hr size="5px" color="black">
+    <audio src="Billie Eilish - WILDFLOWER (Official Lyric Video).mp3" autoplay controls muted ></audio>
+
+<br>
+<hr size="5px" color="black">
+
+    <marquee bgcolor="pink" scrollamount="15"><h2 style="color: blueviolet;">This is the End of Images, Video and Audio tags</h2></marquee>
+
+<H2 id="Lists">Lists</H2>
+    <h3 style="color:blueviolet">Ordered List</h3>
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>   
+    </ol>
+    <ol type="I">
+        <li>HTML</li>
+        <li>CSS
+            <ol type ="i">
+            <li>Internal css</li>
+            <li>External css</li>
+            <li>Inline css</li>
+            </ol>
+        </li>
+            
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>   
+    </ol>
+    <ol type="i">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>   
+    </ol>
+    <ol type="a">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>   
+    </ol>
+    <ol type="1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>   
+    </ol>
+    <hr size="5px" color="black">
+    <h3 style="color:rgb(77, 0, 122)" id="ulList">Unordered List</h3>
+    <ul type="circle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+    <ul type="Square">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+    <ul type="none">
+        <li>HTML</li>
+        <li>CSS</li>
+            <ul type="disc">
+                <li>Internal css</li>
+                <li>External css</li>
+                <li>Inline css</li>
+            </ul>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+    <ul type="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+
+<hr size="5px" color="black">
+
+<h2 id="ddList">Discription List</h2>
+<dl>HTML</dl>
+<dd>
+    HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages and web applications.
+</dd>
+    <dl>CSS</dl>
+<dd>
+    CSS stands for Cascading Style Sheets. It is used to style and layout web pages.
+</dd>
+    <dl>JavaScript</dl>
+<dd>
+    JavaScript is a programming language that is commonly used to create interactive effects within web browsers.
+</dd>
+    <dl>URl</dl>
+<dd>
+    URL stands for Uniform Resource Locator. It is the address of a web page on the internet.
+
+</dd>
+    <dl>HTTP</dl>
+<dd>
+     HTTP stands for Hypertext Transfer Protocol. It is the protocol used for transmitting web pages over the internet.
+
+</dd>
+<br>
+
+<hr size="5px" color="black">
+
+ <h2 id="Table">Table</h2>
+<a href="#up">Click here to go below</a>
+ <br>
+<h3 id="down">Vertical Table</h3>
+
+    <table border = 2px, cellpadding="10px", cellspacing="0px" bgcolor="lightgrey">
+        <tr bgcolor="darkgrey", align="center">
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>SST</th>
+
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>Alice</td>
+            <td>85</td>
+            <td>90</td>
+            <td>88</td>
+            <td>92</td>
+        </tr>
+        <tr align ="center">
+            <td>2</td>
+            <td>Bob</td>
+            <td>78</td>
+            <td>82</td>
+            <td>80</td>
+            <td>85</td> 
+        </tr>
+        <tr align="center">
+            <td>3</td>
+            <td>Charlie</td>
+            <td>92</td>
+            <td>88</td>
+            <td>91</td>
+            <td>89</td>
+        </tr>
+        <tr align="center">
+            <td>4</td>
+            <td>Diana</td>
+            <td>88</td>
+            <td>91</td>
+            <td>87</td>
+            <td>90</td>
+        </tr>
+    </table>
+    
+<br>
+<hr size="5px" color="black">
+<h3>Horizontal Table</h3>
+    <table border = 2px, cellpadding="10px", cellspacing="0px" bgcolor="lightpink">
+        <tr align="center">
+            <th bgcolor="darkpink", style="color: aliceblue;">Roll No</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr align="center">
+            <th bgcolor="darkpink" style="color: aliceblue;">Name</th>
+            <td>Alice</td>
+            <td>Bob</td>
+            <td>Charlie</td>
+            <td>Diana</td>
+        </tr>
+        <tr align="center">
+            <th bgcolor="darkpink", style="color: aliceblue;">English</th>
+            <td>85</td>
+            <td>78</td>
+            <td>92</td>
+            <td>88</td>
+        </tr>
+        <tr align="center">
+            <th bgcolor="darkpink", style="color: aliceblue;">Maths</th>
+            <td>90</td>
+            <td>82</td>
+            <td>88</td>
+            <td>91</td>
+        </tr>
+        <tr align="center">
+            <th bgcolor="darkpink", style="color: aliceblue;">Science</th>
+            <td>88</td>
+            <td>80</td>
+            <td>91</td>
+            <td>87</td>
+        </tr>
+        <tr align="center">
+            <th bgcolor="darkpink", style="color: aliceblue;">SST</th>
+            <td>92</td>
+            <td>85</td>
+            <td>89</td>
+            <td>90</td>
+        </tr>
+    </table>
+<br>
+<hr size="5px" color="black">
+    <table border = 2px, cellpadding="15px", cellspacing="8", bgcolor="Darkblue", id="up">
+        <tr align="center", bgcolor="LightBlue", style="color: black;">
+            <th>Microsoft Office</th>
+            <th>Web Designing</th>
+        </tr>
+        <tr align="center", bgcolor="LightBlue", style="color: black;">
+            <td>Microsft Word</td>
+            <td>Hyper Text Markup Language</td>
+        </tr>
+        <tr align="center", bgcolor="LightBlue", style="color: black;">
+            <td>Microsoft Excel</td>
+            <td>Cascading Style Sheets</td>
+        </tr>
+        <tr align="center", bgcolor="LightBlue", style="color: black;">
+            <td>Microsoft PowerPoint</td>
+            <td>JavaScript</td>
+        </tr>
+    </table>
+<a href="#down">Click here to go above</a>
+<br>
+
+ <hr size="5px" color="black">
+
+<h2 id="Colspan">Colspan</h2>
+    <table border="2px" cellpadding="10px" cellspacing="6" bgcolor="lightgreen">
+        <tr bgcolor="darkgreen" style="color: white;" align="center">
+            <th>Time Slot</th>
+            <th colspan="2">Day 1</th>
+            <th colspan="2">Day 2</th>
+        </tr>
+        <tr align="center">
+            <td>8:00 AM</td>
+            <td>Session 1</td>
+            <td>Session 2</td>
+            <td>Session 3</td>
+            <td>Session 4</td>
+        </tr>
+        <tr align="Center">
+            <td>10:00 AM</td>
+            <td>Ms Office</td>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JavaScript</td>
+    </table>
+    
+<br>
+<hr size="5px" color="black">
+
+<H2 id="Rowspan">Rowspan</H2>
+
+    <table border="3px" cellpadding="10px" cellspacing="6" bgcolor="lightcoral" bordercolor="black">
+        <tr align="center" bgcolor="darkcoral" style="color: white;">
+            <th>Day</th>
+            <th>Meal</th>
+            <th>Food</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>Breakfast</td>
+            <td>Pancakes</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Caesar Salad</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Tuesday</td>
+            <td>Lunch</td>
+            <td>Grilled Chicken Salad</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Vegetable Stir-fry</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Wednesday</td>
+            <td>Dinner</td>
+            <td>Spaghetti Bolognese</td>
+        </tr>
+        <tr>
+            <td>Snack</td>
+            <td>Fruit Salad</td>
+        </tr>
+    </table>
+<br>
+<hr size="5px" color="black">
+<h2>RowSpan 3 Practice</h2>
+    <table border="3px" cellpadding="10px" cellspacing="6" bgcolor="lightyellow" bordercolor="black">
+        <tr align="center" bgcolor="gold" style="color: black;">
+            <th>Day</th>
+            <th>Meal</th>
+            <th>Food</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Monday</td>
+            <td>Breakfast</td>
+            <td>Omelette</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Grilled Chicken</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Vegetable Curry</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>Breakfast</td>
+            <td>Pancakes</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Caesar Salad</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Spaghetti Bolognese</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Wednesday</td>
+            <td>Breakfast</td>
+            <td>Fruit Smoothie</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Quinoa Salad</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Grilled Salmon</td>
+        </tr>
+    </table>
+
+<br>
+<hr size="5px" color="black">
+
+<h3 id="Align">Vertical Aligned</h3>
+    <table border="2px" cellpadding="10px" cellspacing="6" bgcolor="lightgrey">
+        <tr>
+            <td valign="top" bgcolor="lightcyan" width="200px" height="150px">Top Aligned Text</td>
+            <td valign="middle" bgcolor="lightseagreen" width="200px" height="150px">Middle Aligned Text</td>
+            <td valign="bottom" bgcolor="lightsteelblue" width="200px" height="150px">Bottom Aligned Text</td>
+        </tr>
+    </table>
+<h3>outline table</h3>
+    <table border="1" cellpadding="0" cellspacing="0px" bgcolor="lightgrey">
+        <tr>
+            <td>
+                <table border="0" cellpadding="20" cellspacing="0px" bgcolor="lightyellow">
+                    <tr>
+                        <th>Ms Office</th>
+                        <td>Word</td>
+                        <td>Excel</td>
+                        <td>PowerPoint</td>
+                    </tr>
+                    <tr>
+                        <th>Web Designing</th>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>JavaScript</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+<br>
+<hr size="5px" color="black">
+<h2 id="BorderStyle">Border Styles</h2>
+    <table border="2px" cellpadding="10px" cellspacing="6">
+        <tr>
+            <th style="border: 4px ridge black;">Month</th>
+            <th style="border: 4px none;">Salary</th>
+            
+        </tr>
+        <tr>
+            <td style="border: 4px solid red;">January</td>
+            <td style="border: 4px solid red;">$50</td>
+            </tr>
+            <tr>
+            <td style="border: 4px dotted green;">Febuary</td>
+            <td style="border: 4px dashed blue;">$60</td>
+            </tr>
+            <tr>
+            <td style="border: 4px double brown;">March</td>
+            <td style="border: 4px groove gray;">$45</td>
+            </tr>
+            <tr>
+            <td style="border: 7px inset orange;">April</td>
+            <td style="border: 7px outset purple">$30</td>   
+            </tr>      
+            
+        </tr>
+    </table>
+<br>
+<hr size="5px" color="black">
+
+    <h2 id="HTML5">HTML5 Elements</h2>
+    <div style="background-color: rgb(156, 225, 255); border: 6px dashed red; border-radius: 20px; text-align: center; height: 60%; width: 50%; padding: 20px;">
+        <header><p style="font-weight: bold; font-size: 20px;">Header Tag</p>Represents introductory content or a set of navigational links for a documnet or section.</header>
+        <nav><p style="font-weight: bold; font-size: 20px;">Nav Tag</p>Defines a section containing navigation links</nav>
+        <article><p style="font-weight: bold; font-size: 20px;">Article Tag</p>Represents a self-contained composition in a document, such as a blog post, forum post, or news article.</article>
+        <section><p style="font-weight: bold; font-size: 20px;">Section tag</p>Represents a generic standalone section of a document, which doesn't have a more specific semantic Element represent it.</section>
+        <aside><p style="font-weight: bold; font-size: 20px;">Aside Tag</p>Represents content taht is tangentially related to the content arount it, often presented as a sidebar</aside>
+        <details><p style="font-weight: bold; font-size: 20px;">Details Tag</p>Used together to create an interactive widget that the user can open and close</details>
+        <summary><p style="font-weight: bold; font-size: 20px;">Summary Tag</p>Provides a visible heading for the details</summary>
+        <figure><p style="font-weight: bold; font-size: 20px;">Figure Tag</p><img src="/Nissan R34 Cyberpunk Style.png" alt="Image" width="40%" height="40%"><figcaption>Nissan R34</figcaption><br>Used to group media content (like = images, video, or code cnippets) with its captions</figure>
+        <figcaption><p style="font-weight: bold; font-size: 20px;">Figcaption Tag</p>Provieds the caption for the figure</figcaption>
+        <Mark><p style="font-weight: bold; font-size: 20px;">Mark Tag</p>Represents Text which is marked or highlighted for refrence or notation purposes.</Mark>
+        <time><p style="font-weight: bold; font-size: 20px;">Time Tag</p>Represents a Specific period in time or a date.</time>
+        <Footer><p style="font-weight: bold; font-size: 20px;">Footer Tag</p>Represents a footer for its nearest sectioning content or the root element. It typically contains information about the author, copyright data, or links to related documents.</Footer>
+    </div>
+<br>
+<hr size="5px" color="black">
+<br>
+<div>
+    <iframe src="/Nissan R34 Cyberpunk Style.png" title="Nissan Poster" width="560" height="316"></iframe>
+    <iframe src="/Rennala Poster final.png" title="Rennala Poster" width="560" height="316"></iframe>
+    <iframe src="/Coffee Ad Poster.png" title="Nissan Poster" width="560" height="316"></iframe>
+</div>
+
+<br>
+<hr size="5px" color="black">
+<br>
+
+<embed src="/AURORA - Cure For Me.mp4" height="316px" width="560px">
+<br>
+<embed src="/Billie Eilish - WILDFLOWER (Official Lyric Video).mp3" >
+<br>
+
+<hr size="5px" color="black">
+
+<h2>CSS</h2>
+
+<div class="dv">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv5">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv6">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<div class="dv7">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem quasi ipsum vel. Expedita molestias tempora distinctio a voluptatibus id error architecto aliquam laudantium alias dicta provident quibusdam quae facere itaque, veritatis odit sapiente possimus unde maiores, minus, obcaecati repellat placeat. Qui vel dolore temporibus id, placeat ipsa iure recusandae.
+</div>
+<br>
+<hr size="5px" color="black">
+
+<i>This Text is italic</i><br>
+<i id="italic">This Text is italic</i><br>
+<i>This Text is italic</i><br>
+<i id="italic">This Text is italic</i><br>
+<i>This Text is italic</i><br>
+<i>This Text is italic</i><br>
+<i >This Text is italic</i><br>
+
+<hr size="5px" color="black">
+<div id="div1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati esse modi, eius quis alias quibusdam. Illum necessitatibus vero similique vel magni, placeat a voluptatem voluptas modi repudiandae! Modi eligendi voluptate nisi officiis?
+</div>
+<div id="div2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae culpa atque asperiores aliquam, aspernatur obcaecati nostrum itaque eligendi assumenda eum, voluptas debitis ducimus repudiandae ad cumque dolorum, quibusdam magnam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur recusandae culpa atque asperiores aliquam, aspernatur obcaecati nostrum itaque eligendi assumenda eum, voluptas debitis ducimus repudiandae ad cumque dolorum, quibusdam magnam!
+</div>
+<br>
+<hr size="5px" color="black">
+
+<h3>Group Selectors</h3>
+
+<strong>
+    This Text is strong
+</strong>
+<br>
+<em>
+    This Text is emphasised
+</em>
+<br>
+<tt>
+    We Use /* */ to write comments in CSS
+</tt>
+<br>
+
+<hr size="5px" color="black">
+<div class="bgprop">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae doloribus consequuntur quas incidunt mollitia praesentium magnam unde eius architecto! Fugiat impedit, illo quam non facere tenetur tempora magni. Voluptatibus consequatur nisi ipsum eius expedita voluptate possimus quae veniam, eligendi molestiae doloribus. Nesciunt ex eos deleniti veritatis vitae quaerat iste quod sequi debitis, praesentium facere possimus delectus officiis molestias ea dolores quasi temporibus, ad odio beatae. Reiciendis odio delectus aspernatur dignissimos ipsa nisi dolore, quaerat unde assumenda modi ipsum accusamus ullam voluptate at non quis obcaecati, praesentium ratione maiores. Ab voluptates sed officia sapiente ad deleniti nemo harum. Consequatur, laboriosam reprehenderit?</p>
+</div>
+<br>
+<hr size="5px" color="black">
+
+<dl style="font-weight: 700; font-size: larger;">Sub Selectors or CSS Combinators</dl>
+<dd>
+used to define the relationship between multiple selectors, allowing for more specific targeting of HTML elements based on their position in the document structure.
+</dd>
+<div>
+    <h4>Next Sibling Combinator</h4>
+</div>
+<div>
+    <i>Alternative Combinator</i>
+</div>
+<div>
+    <small>General Sibling Combinator</small>
+</div>
+<div>
+    <p>Child Combinator</p>
+</div>
+
+<div class="main">
+    <h1 style="font-size: 2.5em; font-weight: bold;"><i><u>Welcome To My Webpage</u></i></h1>
+    <img src="/Keep F_resh Poster Design.png" alt="nike poster" title="Nike Poster" class = "picture">
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ipsum cumque reiciendis nam quae eveniet placeat doloremque qui atque non hic, voluptate officiis inventore eaque adipisci molestias minima nobis! Neque corrupti, vitae et ea aliquid natus magni nam tempora commodi asperiores architecto aliquam atque officiis quam minus accusantium eius perspiciatis laudantium consectetur, labore ad a! Magnam quae obcaecati delectus tempore accusamus corrupti, quibusdam quos omnis unde harum quasi similique expedita distinctio sint veniam dolor exercitationem earum temporibus cupiditate tempora. Fugiat quo, esse nobis maxime temporibus animi, quaerat ducimus placeat ipsum, veritatis totam et quae debitis. Porro saepe itaque nobis exercitationem repellendus voluptatum sit quae magni enim eligendi amet rerum, autem corrupti nulla eos asperiores voluptatem! Expedita, perspiciatis harum. Mollitia voluptatum sunt consequuntur, repudiandae labore ullam consequatur beatae maiores ipsum inventore. Quam, asperiores consectetur cupiditate repellendus, voluptatibus delectus expedita incidunt hic quisquam, corrupti tempora nisi fugit consequatur est accusantium repellat optio magnam laudantium quo laboriosam necessitatibus reiciendis explicabo nobis! Recusandae quasi delectus voluptatum amet non ex reprehenderit enim officia, cum velit, eaque eius mollitia. Molestiae laboriosam vitae animi velit at voluptate repellat veritatis, rem pariatur veniam, esse tempora consequuntur mollitia illum rerum saepe? Magni, atque necessitatibus nostrum eligendi distinctio, odit animi reiciendis inventore, illum quo tenetur nesciunt provident vel quisquam a ad fugiat. Vitae accusantium ut dolorem enim inventore, explicabo facilis dignissimos quasi. Itaque eius necessitatibus odit beatae eaque! Maxime dignissimos culpa eligendi nulla officia aliquid esse minima repellendus enim provident ea ipsa incidunt rerum vitae, harum minus quaerat omnis laudantium placeat suscipit. Ducimus laborum maxime id ex dolorem! Vel nisi libero repellendus corrupti mollitia ab dolor nostrum debitis, tenetur quis consequatur ex in consectetur harum quibusdam labore blanditiis voluptatem voluptates quidem reprehenderit est dolores aperiam. Error vitae quia fuga! Ipsum non enim corporis repellat, facere, officia autem eum quibusdam itaque voluptates mollitia sapiente consequatur. Praesentium quia architecto nostrum voluptatem asperiores assumenda mollitia. Eum perferendis labore quasi aspernatur aliquid veritatis, sint cumque. Velit similique neque numquam, minima repellendus aliquid, dignissimos voluptatibus molestias sequi nostrum, nulla blanditiis beatae? Recusandae, corporis sapiente facere mollitia saepe voluptas reiciendis veritatis beatae accusamus tempore quod! Animi enim quam debitis dolore saepe eos quos dicta. Maxime facere asperiores eum, rerum harum quia eveniet obcaecati, labore natus sit saepe, blanditiis similique magnam assumenda? Quae pariatur consectetur, hic qui aliquid dolore blanditiis tenetur facere molestias sequi enim asperiores dignissimos sed corrupti neque! Quasi asperiores excepturi ab amet eveniet inventore officiis at doloremque odio soluta vero nam fugiat unde aperiam laboriosam eligendi, autem enim sint aspernatur consequuntur laudantium. Cupiditate repudiandae, nesciunt similique libero labore quas expedita in laboriosam obcaecati omnis reiciendis, eligendi illum magni facilis recusandae dicta cumque vel! Impedit autem iure non accusantium, corrupti consequuntur id. Suscipit est veniam saepe asperiores atque, voluptas assumenda dolorem doloremque quis libero sint eveniet modi laborum culpa necessitatibus expedita error quidem a commodi magnam odit ratione? Praesentium quae possimus velit molestias odio facilis libero ullam vitae ipsum reiciendis nobis amet a quisquam delectus itaque, ratione quas eligendi quos quidem perspiciatis. Ipsam, explicabo?</p>
+</div>
+
+<div>
+    <img src="/Keep F_resh Poster Design.png" width="320" height="400" alt="Nike Poster" title="Nike Poster" class="img1">
+</div>
+
+<h1>Pseudo Elements</h1>
+
+    <h2>using ::before</h2>
+
+    <h3>This is a Heading</h3>
+    <big>The ::before Pseudo-Element inserts content before an element's content.</big>
+
+    <h2>using ::after</h2>
+    <b>My Name is Prateek</b>
+    <b>I Live in Delhi</b>
+
+    <h2>using ::first-line</h2>
+    <tt> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ducimus temporibus, iste, ad ex voluptatibus perferendis neque, dolorum necessitatibus fuga in repudiandae consequuntur cum nisi assumenda beatae exercitationem quod dolore excepturi unde eveniet quis sit culpa dicta. Non corporis, ex illo iure omnis, doloremque dolor dolores ullam possimus deleniti quae!</tt>
+
+    <h2>using ::first-letter</h2>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus mollitia quasi itaque reprehenderit minus maiores et odit at quaerat ab blanditiis labore voluptatibus aspernatur, excepturi omnis nulla aliquid corporis veritatis ipsam?</article>
+
+    <h2>using ::Selection</h2>
+    <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, molestiae. Asperiores culpa, quibusdam numquam nesciunt aperiam ea exercitationem cum aliquam.</i>
+
+    <h2>using ::marker</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+
+    <h2>using ::placeholder</h2>
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name">
+    <br><br>
+<H1>Display Properties</H1>
+    <h2>Display:Block</h2>
+    <div class="block"><span class="spanC">Header</span>This is a span with display block <span class="spanD">Footer</span></div>
+    <h2>Display:inline</h2>
+    <span class="inline"><span class="spanA">Header</span>This is a span with display inline <span class="spanB">Footer</span></span>
+    <h2>Display:inline-block</h2>
+    <div class="inline-block"><span class="spanG">Header</span>This is a span with display inline-block <span class="spanH">Footer</span></div>
+    <h2>Display:none</h2>
+    <div class="none"><span class="spanE">Header</span>This is a span with display none <span class="spanF">Footer</span></div>
+    <h2>Display:flex</h2>
+    <div class="flex"><span class="spanI">Header</span>This is a span with display Flex <span class="spanJ">Footer</span></div>
+    <h2>Display:grid</h2>
+    <div class="grid"><span class="spanK">Header</span>This is a span with display grid <span class="spanL">Footer</span></div>
+    <h2>Display:Content</h2>
+    <div class="content"><span class="spanM">Header </span>This is a span with display content <span class="spanN">Footer</span></div>
+
+</div>
+</body>
+</html>

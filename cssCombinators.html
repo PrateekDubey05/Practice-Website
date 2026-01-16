@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    div tt{
+        color: darkblue;
+        font-weight: 700;
+    }
+    div>p{
+        color: darkgreen;
+        font-weight: 600;
+    }
+    h2 + i{
+        color: white;
+        background-color: red;
+        font-weight: 500;
+    }
+    strong ~ small{
+        color: darkorange;
+        font-weight: 400;
+    }
+    </style>
+    <div>
+        <h2>Descendant Combinator</h2>
+        <tt>This is a telytext</tt><br>
+        <tt>This is a telytext</tt><br>
+        <tt>This is a telytext</tt>
+    </div>
+    <div>
+        <h2>Child Combinator</h2>
+        <P>This is a para</P>
+        <P>This is a para</P>
+        <P>This is a para</P>
+    </div>
+    <div>
+        <h2>Adjacent Combinator</h2>
+            <i>This is an italic text</i><br>
+            <i>This is an italic text</i><br>
+            <i>This is an italic text</i>
+    </div>
+    <br>
+    <div>
+        <strong>General Sibling Combinator</strong><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small><br>
+            <small>This is a small text</small>
+    </div>
+</body>
+</html>
